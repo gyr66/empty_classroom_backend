@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gyr.classroom_web.mapper.QueryLogMapper">
+    <select id="getAll" resultType="queryLog">
+        SELECT *
+        FROM query_log
+    </select>
+
+    <insert id="insert" parameterType="queryLog">
+        INSERT INTO query_log
+        VALUES (#{date}, #{ip}, #{query})
+    </insert>
+</mapper>
